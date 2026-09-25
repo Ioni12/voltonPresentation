@@ -2,7 +2,7 @@ import React from "react";
 import { useReveal } from "../hooks/useReveal";
 import LightningText from "./LightningText";
 
-import heroImg from "../assets/images/Gemini_Generated_Image_u7gmhyu7gmhyu7gm.jpg";
+import heroImg from "../assets/images/Gemini_Generated_Image_u7gmhyu7gmhyu7gm_upscayl_4x_ultramix-balanced-4x.png";
 
 // Brand green — keep in sync with the other components.
 const BRAND = "#16a34a";

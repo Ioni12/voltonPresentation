@@ -1,7 +1,8 @@
 import React from "react";
 import { useReveal } from "../hooks/useReveal";
+import LightningText from "./LightningText";
 
-import heroImg from "../assets/images/red-zeppelin-UVGE-o757-g-unsplash.jpg";
+import heroImg from "../assets/images/Gemini_Generated_Image_u7gmhyu7gmhyu7gm.jpg";
 
 // Brand green — keep in sync with the other components.
 const BRAND = "#16a34a";
@@ -67,13 +68,26 @@ export default function Hero() {
           Licensed Energy Supplier · Volton SHPK
         </Pop>
 
-        <Pop revealed={revealed} step={1}>
-          <h1 className="text-[clamp(2.6rem,7vw,5.4rem)] font-semibold leading-[1.02] tracking-tight">
+        {/* Headline plays the lightning flash once on load (no Pop wrapper,
+            so the two effects don't fight over opacity/transform). */}
+        <h1 className="text-[clamp(2.6rem,7vw,5.4rem)] font-semibold leading-[1.02] tracking-tight">
+          <LightningText
+            color="#ffffff"
+            glow="rgba(234,241,255,0.85)"
+            settle="#ffffff"
+          >
             Your Energy,
-            <br />
-            <span style={{ color: BRAND }}>Our Solution</span>
-          </h1>
-        </Pop>
+          </LightningText>
+          <br />
+          <LightningText
+            color="#4ade80"
+            glow="rgba(74,222,128,0.85)"
+            settle={BRAND}
+            delay={120}
+          >
+            Our Solution
+          </LightningText>
+        </h1>
 
         <Pop revealed={revealed} step={2}>
           <p className="mt-6 max-w-[46ch] text-[1.1rem] leading-relaxed text-white/75">

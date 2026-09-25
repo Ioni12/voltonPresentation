@@ -3,7 +3,6 @@ import { useReveal } from "../hooks/useReveal";
 
 // Brand green — keep in sync with the other components.
 const BRAND = "#16a34a";
-const BG = "#0b1f14";
 
 const FAQS = [
   {
@@ -32,9 +31,8 @@ function Item({ q, a, open, onToggle, delayMs }) {
   return (
     <div ref={ref}>
       <div
-        className="overflow-hidden rounded-xl border"
+        className="overflow-hidden rounded-xl border bg-[#10291b] dark:bg-[#112619]"
         style={{
-          backgroundColor: "#10291b",
           borderColor: open ? `${BRAND}66` : "rgba(255,255,255,0.12)",
           opacity: revealed ? 1 : 0,
           transform: revealed ? "translateY(0)" : "translateY(24px)",
@@ -113,8 +111,7 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="relative px-[6vw] py-[12vh] font-sans text-white"
-      style={{ backgroundColor: BG }}
+      className="relative bg-[#0b1f14] px-[6vw] py-[12vh] font-sans text-white dark:bg-[#0c1d14]"
     >
       {/* Heading */}
       <div ref={headRef} className="mx-auto mb-[6vh] max-w-[60ch] text-center">

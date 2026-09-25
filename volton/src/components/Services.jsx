@@ -60,11 +60,11 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative bg-[#f4faf6] px-[6vw] py-[12vh] font-sans text-[#0f1a14]"
+      className="relative bg-[#f4faf6] px-[6vw] py-[12vh] font-sans text-[#0f1a14] dark:bg-[#08160e] dark:text-white"
     >
       {/* Heading */}
       <Spin spin="left" className="mx-auto mb-[7vh] max-w-[60ch] text-center">
-        <div className="mb-5 inline-flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-[#0f1a14]/60">
+        <div className="mb-5 inline-flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-[#0f1a14]/60 dark:text-white/60">
           <span
             className="h-[1.5px] w-8 rounded-full"
             style={{ background: BRAND }}
@@ -86,7 +86,7 @@ export default function Services() {
             spin={item.spin}
             className="h-full"
           >
-            <div className="group flex h-full flex-col rounded-2xl border border-[#0f1a14]/10 bg-white p-10 transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-[#16a34a]/40 hover:shadow-[0_20px_40px_-24px_rgba(22,163,74,0.35)]">
+            <div className="group flex h-full flex-col rounded-2xl border border-[#0f1a14]/10 bg-white p-10 dark:border-white/10 dark:bg-[#0e2016] transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-[#16a34a]/40 hover:shadow-[0_20px_40px_-24px_rgba(22,163,74,0.35)]">
               <div
                 className="mb-7 flex h-16 w-16 items-center justify-center rounded-xl border transition-colors duration-300 group-hover:bg-[#16a34a] group-hover:text-white"
                 style={{
@@ -112,7 +112,7 @@ export default function Services() {
               <h3 className="mb-3 text-[1.3rem] font-semibold leading-snug tracking-tight">
                 {item.title}
               </h3>
-              <p className="mb-8 text-[0.98rem] leading-relaxed text-[#0f1a14]/65">
+              <p className="mb-8 text-[0.98rem] leading-relaxed text-[#0f1a14]/65 dark:text-white/60">
                 {item.body}
               </p>
 

@@ -41,12 +41,12 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative grid grid-cols-1 items-center gap-[6vw] bg-white px-[6vw] py-[12vh] font-sans text-[#0f1a14] md:grid-cols-2"
+      className="relative grid grid-cols-1 items-center gap-[6vw] bg-white px-[6vw] py-[12vh] font-sans text-[#0f1a14] dark:bg-[#0c1d14] dark:text-white md:grid-cols-2"
     >
       {/* Text */}
       <div className="max-w-[54ch]">
         <Mask className="mb-5">
-          <span className="inline-flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-[#0f1a14]/60">
+          <span className="inline-flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-[#0f1a14]/60 dark:text-white/60">
             <span
               className="h-[1.5px] w-8 rounded-full"
               style={{ background: BRAND }}
@@ -63,7 +63,7 @@ export default function About() {
         </h2>
 
         <Mask delayMs={180} className="mb-4">
-          <p className="text-[1.02rem] leading-[1.75] text-[#0f1a14]/65">
+          <p className="text-[1.02rem] leading-[1.75] text-[#0f1a14]/65 dark:text-white/60">
             Volton SHPK is a licensed energy company focused on supplying
             electricity to businesses connected to 6 kV to 110 kV networks. With
             the liberalization of the energy market, we bring flexibility and
@@ -73,7 +73,7 @@ export default function About() {
         </Mask>
 
         <Mask delayMs={270} className="mb-9">
-          <p className="text-[1.02rem] leading-[1.75] text-[#0f1a14]/65">
+          <p className="text-[1.02rem] leading-[1.75] text-[#0f1a14]/65 dark:text-white/60">
             We source electricity from international energy exchanges and local
             producers. Our teams forecast annual consumption accurately and
             actively look for the most competitive prices, delivering
@@ -91,13 +91,13 @@ export default function About() {
             transitionDelay: extraRevealed ? "360ms" : "0ms",
           }}
         >
-          <div className="mb-9 flex flex-wrap gap-x-10 gap-y-4 border-t border-[#0f1a14]/10 pt-6">
+          <div className="mb-9 flex flex-wrap gap-x-10 gap-y-4 border-t border-[#0f1a14]/10 pt-6 dark:border-white/10">
             {STATS.map((s) => (
               <div key={s.label}>
                 <div className="text-lg font-semibold tracking-tight">
                   {s.value}
                 </div>
-                <div className="text-xs uppercase tracking-[0.12em] text-[#0f1a14]/50">
+                <div className="text-xs uppercase tracking-[0.12em] text-[#0f1a14]/50 dark:text-white/50">
                   {s.label}
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function About() {
 
         {/* Floating badge */}
         <div
-          className="absolute -bottom-6 left-6 z-10 max-w-[230px] rounded-xl border border-white/10 bg-[#0b1f14] p-6 text-white shadow-xl"
+          className="absolute -bottom-6 left-6 z-10 max-w-[230px] rounded-xl border border-white/10 bg-[#0b1f14] p-6 text-white shadow-xl dark:border-[#16a34a]/30 dark:bg-[#06140d]"
           style={{
             opacity: imgRevealed ? 1 : 0,
             transform: imgRevealed

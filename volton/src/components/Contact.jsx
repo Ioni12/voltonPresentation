@@ -51,7 +51,7 @@ function Field({
 }
 
 const fieldBase =
-  "block w-full border border-[#0f1a14]/15 bg-white px-6 py-4 text-[0.96rem] text-[#0f1a14] outline-none transition-colors duration-300 placeholder:text-[#0f1a14]/40 focus:border-[#16a34a]";
+  "block w-full border border-[#0f1a14]/15 bg-white px-6 py-4 text-[0.96rem] text-[#0f1a14] outline-none transition-colors duration-300 placeholder:text-[#0f1a14]/40 focus:border-[#16a34a] dark:border-white/15 dark:bg-[#08160e] dark:text-white dark:placeholder:text-white/40 dark:focus:border-[#16a34a]";
 
 function InfoRow({ label, children, icon }) {
   return (
@@ -78,7 +78,7 @@ function InfoRow({ label, children, icon }) {
         </svg>
       </div>
       <div>
-        <div className="mb-0.5 text-[0.68rem] font-medium uppercase tracking-[0.16em] text-[#0f1a14]/50">
+        <div className="mb-0.5 text-[0.68rem] font-medium uppercase tracking-[0.16em] text-[#0f1a14]/50 dark:text-white/50">
           {label}
         </div>
         <div className="text-[0.98rem] leading-snug">{children}</div>
@@ -116,8 +116,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative px-[6vw] py-[12vh] font-sans text-[#0f1a14]"
-      style={{ backgroundColor: "#f4faf6" }}
+      className="relative bg-[#f4faf6] px-[6vw] py-[12vh] font-sans text-[#0f1a14] dark:bg-[#08160e] dark:text-white"
     >
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-[6vw] md:grid-cols-2">
         {/* Left: info + map */}
@@ -130,7 +129,7 @@ export default function Contact() {
                 transition: `opacity 700ms ${SOFT_EASE}, transform 700ms ${SOFT_EASE}`,
               }}
             >
-              <div className="mb-5 inline-flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-[#0f1a14]/60">
+              <div className="mb-5 inline-flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-[#0f1a14]/60 dark:text-white/60">
                 <span
                   className="h-[1.5px] w-8 rounded-full"
                   style={{ background: BRAND }}
@@ -140,7 +139,7 @@ export default function Contact() {
               <h2 className="mb-5 max-w-[20ch] text-[clamp(2rem,4.2vw,3rem)] font-semibold leading-[1.1] tracking-tight">
                 Get a <span style={{ color: BRAND }}>Personalized Offer</span>
               </h2>
-              <p className="mb-10 max-w-[44ch] text-[1.02rem] leading-[1.75] text-[#0f1a14]/65">
+              <p className="mb-10 max-w-[44ch] text-[1.02rem] leading-[1.75] text-[#0f1a14]/65 dark:text-white/60">
                 For a custom quote or more information, reach out to us and our
                 team will get back to you.
               </p>
@@ -195,7 +194,7 @@ export default function Contact() {
           {/* Map: drops in with the same bounce as the Drift pin */}
           <div ref={mapRef}>
             <div
-              className="overflow-hidden rounded-2xl border border-[#0f1a14]/10"
+              className="overflow-hidden rounded-2xl border border-[#0f1a14]/10 dark:border-white/10"
               style={{
                 opacity: mapRevealed ? 1 : 0,
                 transform: mapRevealed ? "translateY(0)" : "translateY(-40px)",
@@ -209,7 +208,7 @@ export default function Contact() {
                 src={MAP_SRC}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="block h-[260px] w-full border-0"
+                className="block h-[260px] w-full border-0 transition-[filter] duration-500 dark:[filter:invert(90%)_hue-rotate(180deg)_saturate(0.8)_brightness(0.95)_contrast(0.9)]"
               />
             </div>
           </div>
@@ -219,7 +218,7 @@ export default function Contact() {
         <div ref={formRef}>
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col justify-center rounded-3xl border border-[#0f1a14]/10 bg-white p-8 shadow-[0_30px_60px_-40px_rgba(15,26,20,0.25)] md:p-10"
+            className="flex flex-col justify-center rounded-3xl border border-[#0f1a14]/10 bg-white p-8 shadow-[0_30px_60px_-40px_rgba(15,26,20,0.25)] dark:border-white/10 dark:bg-[#0e2016] dark:shadow-none md:p-10"
           >
             <div className="mb-4 flex flex-col gap-4 sm:flex-row">
               <Field revealed={formRevealed} delayMs={0} className="flex-1">

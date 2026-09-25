@@ -3,7 +3,6 @@ import { useReveal } from "../hooks/useReveal";
 
 // Brand green — keep in sync with the other components.
 const BRAND = "#16a34a";
-const BG = "#06140d";
 
 // TODO: replace with Volton's real email address.
 const CONTACT_EMAIL = "info@volton.al";
@@ -89,10 +88,7 @@ export default function Footer() {
   const [gridRef, revealed] = useReveal(0.2);
 
   return (
-    <footer
-      className="relative overflow-hidden px-[6vw] pt-20 font-sans text-white"
-      style={{ backgroundColor: BG }}
-    >
+    <footer className="relative overflow-hidden bg-[#06140d] px-[6vw] pt-20 font-sans text-white dark:bg-[#030a06]">
       {/* Green accent line along the top */}
       <div
         className="absolute inset-x-0 top-0 h-[2px]"
